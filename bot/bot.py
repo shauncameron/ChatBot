@@ -24,7 +24,6 @@ class DeveloperConsole:
 
         for console in DeveloperConsole.consoles:
 
-
             developer_chat_window = console.developer_chat_window
 
             message = f'{bot.name} @ console  ' + entry.message.rstrip().lstrip() + '\n'
@@ -43,20 +42,14 @@ class DeveloperConsole:
         DeveloperConsole.consoles.append(self)
 
         self.root = root
-        self.frame = Frame(self.root)
-
+        self.frame = Frame(self.root, padx=5, pady=5)
         self.w, self.h = dimensions
-
         self.developer_chat_window = Text(self.frame, bd=1, bg='gray18')
-        self.developer_chat_window.place(x=5, y=5, height=self.h-30, width=self.w-10)
         self.developer_chat_window.config(state=DISABLED)
         self.developer_chat_window.tag_config('console_log', foreground='lime green')
-
-        self.chat_window_scrollbar = Scrollbar(root, command=self.developer_chat_window.yview)
-        self.chat_window_scrollbar.place(x=480, height=self.h-20)
-
-
-        self.developer_chat_window.pack()
+        self.frame.place(x=5, y=5, width=980, height=400)
+        self.developer_chat_window.pack(fill=BOTH)
+        self.frame.pack(fill=BOTH)
 
     def show(self):
 

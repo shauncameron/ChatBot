@@ -13,15 +13,15 @@ gary1.__load_tflearn_model__()
 
 root = Tk()
 root.title('Bot Interface')
-root.geometry('500x475')
+root.geometry('1000x450')
 root.resizable(0, 0)
 
 # Chat Window
 
-chat_window_frame = Frame(root)
+chat_window_frame = Frame(root, padx=5, pady=5)
 chat_window = Text(chat_window_frame, bd=1, bg='white')
-chat_window.place(x=5, y=5, height=500, width=475)
-chat_window.pack()
+chat_window.place(x=5, y=5, height=980, width=400)
+chat_window.pack(fill=BOTH)
 
 # Chat Window Config
 
@@ -58,28 +58,28 @@ def insert_user_input(user_input):
 # Chat Window Scrollbar
 
 chat_window_scrollbar = Scrollbar(root, command=chat_window.yview)
-chat_window_scrollbar.place(x=480, y=5, height=390)
+chat_window_scrollbar.place(x=980, height=400)
 
 # Message Window
 
 message_window = Text(root, bd=1, bg='white', width=50, height=10)
-message_window.place(x=25, y=400, width=380, height=40)
+message_window.place(x=5, y=400, width=620, height=40)
 
 # Message Window Scrollbar
 
 message_window_scrollbar = Scrollbar(root, command=message_window.yview)
-message_window_scrollbar.place(x=5, y=400, height=40)
+message_window_scrollbar.place(x=630, y=400, height=40, width=20)
 
 # Message Window Progress Bar
 
-message_window_progress_bar = ttk.Progressbar(root, orient=HORIZONTAL, length=480, mode='determinate')
-message_window_progress_bar.pack(side=BOTTOM, pady=5)
+#message_window_progress_bar = ttk.Progressbar(root, orient=HORIZONTAL, length=480, mode='determinate')
+#message_window_progress_bar.pack(side=BOTTOM, pady=5)
 
 # Submit Message button
 
 submit_button = Button(root, text='Submit', background='light blue', border=0, activebackground='powder blue',
                        width='40', height=10)
-submit_button.place(x=410, y=400, width=85, height=40)
+submit_button.place(x=655, y=400, width=85, height=40)
 
 
 # Bot stuff
@@ -198,7 +198,7 @@ def change_frame(frame):
     developer_console.frame.pack_forget()
     chat_window_frame.pack_forget()
 
-    frame.pack()
+    frame.pack(fill=BOTH)
 
 main_menu = Menu(root, tearoff=False)
 main_menu.add_cascade(label='File', accelerator='Shift+Alt+f', menu=file_menu)
@@ -208,5 +208,7 @@ main_menu.add_separator()
 main_menu.add_command(label='Developer Console', command=lambda: change_frame(developer_console.frame))
 main_menu.add_command(label='Trainer', command=lambda: change_frame(chat_window_frame))
 root.config(menu=main_menu)
+
+change_frame(chat_window_frame)
 
 root.mainloop()
