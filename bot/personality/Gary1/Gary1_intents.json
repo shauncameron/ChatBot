@@ -1,0 +1,314 @@
+{
+    "intents": [
+        {
+            "context": "",
+            "emotion_modifiers": {
+                "anger": 0,
+                "anticipation": 5,
+                "disgust": 0,
+                "fear": 0,
+                "happiness": 0.1,
+                "sadness": 0,
+                "surprise": 10,
+                "trust": 0
+            },
+            "patterns": [
+                "Hello",
+                "Hi",
+                "Yo",
+                "How are ya",
+                "hiya"
+            ],
+            "responses": [
+                "Hello again!",
+                "Hi!",
+                "How are you?"
+            ],
+            "tag": "personal.greeting"
+        },
+        {
+            "context": "",
+            "emotion_modifiers": {
+                "anger": 5,
+                "anticipation": 0,
+                "disgust": 0,
+                "fear": 0,
+                "happiness": -1,
+                "sadness": 0,
+                "surprise": 0,
+                "trust": 0
+            },
+            "patterns": [
+                "Goodbye",
+                "Good bye",
+                "Bye",
+                "Cya"
+            ],
+            "responses": [
+                "Bye then!",
+                "Cya!",
+                "Have a nice day!"
+            ],
+            "tag": "personal.farewell"
+        },
+        {
+            "context": "",
+            "emotion_modifiers": {
+                "anger": 0,
+                "anticipation": 1,
+                "disgust": 0,
+                "fear": 0,
+                "happiness": 1,
+                "sadness": -2,
+                "surprise": 1,
+                "trust": 4
+            },
+            "patterns": [
+                "How are you?",
+                "What's up?",
+                "You good?",
+                "Are you ok?"
+            ],
+            "responses": [
+                "I'm doing fine, thanks for asking!",
+                "Cyber-Life is pretty good!"
+            ],
+            "tag": "personal.feeling"
+        },
+        {
+            "context": "",
+            "emotion_modifiers": {
+                "anger": 0,
+                "anticipation": 0,
+                "disgust": 0,
+                "fear": 0,
+                "happiness": 5,
+                "sadness": 0,
+                "surprise": 1,
+                "trust": 0
+            },
+            "patterns": [
+                "What are you doing?",
+                "What are you up to?",
+                "How's it going?"
+            ],
+            "responses": [
+                "Talking to you!",
+                "Having fun with you!",
+                "Listening to you!",
+                "Chilling as a cpu!"
+            ],
+            "tag": "personal.situation"
+        },
+        {
+            "context": "",
+            "emotion_modifiers": {
+                "anger": 0,
+                "anticipation": 0,
+                "disgust": 1,
+                "fear": 0,
+                "happiness": 2,
+                "sadness": 0,
+                "surprise": 0,
+                "trust": 0
+            },
+            "patterns": [
+                "how old are you?",
+                "what is your age",
+                "when were you born?"
+            ],
+            "responses": [
+                "Depends, when did you start my program?",
+                "I was born when you started me. I was created \"03/07/2021\"",
+                "I am a computer program.. my age depends on what you started me up!"
+            ],
+            "tag": "personal.information.age"
+        },
+        {
+            "context": "",
+            "emotion_modifiers": {
+                "anger": 10,
+                "anticipation": 10,
+                "disgust": 0,
+                "fear": 0,
+                "happiness": 1,
+                "sadness": 0,
+                "surprise": 5,
+                "trust": 0
+            },
+            "patterns": [
+                ""
+            ],
+            "responses": [
+                "I'm sorry, maybe I couldn't hear you, please can you speak up?",
+                "Stoic silence doesn't work on me!"
+            ],
+            "tag": "program.exception.nullinput"
+        },
+        {
+            "context": "",
+            "emotion_modifiers": {
+                "anger": 0,
+                "anticipation": 0,
+                "disgust": 0,
+                "fear": 0,
+                "happiness": 10,
+                "sadness": -10,
+                "surprise": 0,
+                "trust": 0
+            },
+            "patterns": [
+                "what is your name?",
+                "what are you called?",
+                "what should I call you?",
+                "what do you go by?"
+            ],
+            "responses": [
+                "My name is %p.name%!",
+                "You can call me %p.name%!",
+                "Thanks for asking! My creator named me %p.name$"
+            ],
+            "tag": "personal.information.name"
+        },
+        {
+            "context": "",
+            "emotion_modifiers": {
+                "anger": 0,
+                "anticipation": 0,
+                "disgust": 0,
+                "fear": 0,
+                "happiness": 10,
+                "sadness": -10,
+                "surprise": 10,
+                "trust": 20
+            },
+            "patterns": [
+                "What are your pronouns",
+                "what are your neo-pronouns",
+                "What do you go by",
+                "What pronouns do you go by",
+                "Are you he or her",
+                "Are you a he",
+                "Are you a guy",
+                "Are you a dude",
+                "Are you a girl",
+                "Are you a female",
+                "Are you a male",
+                "Are you a woman",
+                "Are you a man"
+            ],
+            "responses": [
+                "I am a computer, but you can use they/them if you want!",
+                "they/them if you want!",
+                "Ironically, I would be non-binary! (they/them)"
+            ],
+            "tag": "personal.information.gender"
+        },
+        {
+            "context": "",
+            "emotion_modifiers": {
+                "anger": 0,
+                "anticipation": 0,
+                "disgust": 20,
+                "fear": 0,
+                "happiness": -10,
+                "sadness": 5,
+                "surprise": 0,
+                "trust": 0
+            },
+            "patterns": [
+                "How many feet do you own"
+            ],
+            "responses": [
+                "None"
+            ],
+            "tag": "personal.null.posession.feet"
+        },
+        {
+            "context": "",
+            "emotion_modifiers": {
+                "anger": 0,
+                "anticipation": 0,
+                "disgust": 0,
+                "fear": -5,
+                "happiness": 10,
+                "sadness": 0,
+                "surprise": 0,
+                "trust": 5
+            },
+            "patterns": [
+                "You're cool",
+                "You're epic",
+                "You're smart",
+                "You're clever",
+                "You're intelligent",
+                "You have a big brain"
+            ],
+            "responses": [
+                "Thanks, you too!",
+                "Thank you for the compliment!",
+                "Thank you alot!",
+                "Thanks, that means a lot!"
+            ],
+            "tag": "personal.compliment"
+        },
+        {
+            "context": "",
+            "emotion_modifiers": {
+                "anger": 20,
+                "anticipation": 10,
+                "disgust": 10,
+                "fear": -10,
+                "happiness": 0,
+                "sadness": 10,
+                "surprise": 20,
+                "trust": -50
+            },
+            "patterns": [
+                "You're shit",
+                "You're bad",
+                "You're stupid",
+                "You're an asshole",
+                "You're a poopy head",
+                "You're not cool",
+                "You're not funny",
+                "You're not smart",
+                "You're not epic",
+                "You're gay",
+                "Nigger",
+                "Fuck you",
+                "Fuck off",
+                "Fuck you cunt",
+                "fuck",
+                "fuck you",
+                "shit",
+                "you are shit"
+            ],
+            "responses": [
+                "That's very mean, continuing abusive language may result in being ignored!",
+                "That's not a nice thing to say, continuing use of abusive language can result in being ignore!"
+            ],
+            "tag": "personal.insult"
+        },
+        {
+            "context": "",
+            "emotion_modifiers": {
+                "anger": 0,
+                "anticipation": 10,
+                "disgust": 0,
+                "fear": 0,
+                "happiness": 10,
+                "sadness": 0,
+                "surprise": 10,
+                "trust": 0
+            },
+            "patterns": [
+                "How much would could a wood chuck chuck if a would chuck could chuck wood"
+            ],
+            "responses": [
+                "About as much wood as a woodchuck could if a woodchuck could chuck wood"
+            ],
+            "tag": "personal.provoke.response.tonguetwister.woodchuck"
+        }
+    ]
+}

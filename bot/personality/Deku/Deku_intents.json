@@ -1,0 +1,29 @@
+{
+    "intents": [
+        {
+            "context": "",
+            "emotion_modifiers": {
+                "anger": 0,
+                "anticipation": 5,
+                "disgust": 0,
+                "fear": 0,
+                "happiness": 0.1,
+                "sadness": 0,
+                "surprise": 10,
+                "trust": 0
+            },
+            "patterns": [
+                "Hello",
+                "Hi",
+                "Yo",
+                "How are ya"
+            ],
+            "responses": [
+                "Hello again!",
+                "Hi!",
+                "How are you?"
+            ],
+            "tag": "personal.greeting"
+        }
+    ]
+}
